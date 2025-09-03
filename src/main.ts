@@ -1,23 +1,24 @@
-import { App, Stack, StackProps } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
+import { App } from "aws-cdk-lib";
+import { ACCOUNT, REGION } from "./constants";
+import { Lab1SecureS3EndpointStack } from "./stacks/lab1-secure-s3-endpoint";
+import { Lab2TransitGatewayStack } from "./stacks/lab2-transit-gateway";
+import { Lab3ECSFargateAppStack } from "./stacks/lab3-ecs-fargate-app";
+import { Lab4LakeFormationStack } from "./stacks/lab4-lake-formation";
+import { Lab5NFSDataSyncStack } from "./stacks/lab5-nfs-data-sync";
 
-export class MyStack extends Stack {
-  constructor(scope: Construct, id: string, props: StackProps = {}) {
-    super(scope, id, props);
-
-    // define resources here...
+const stackProps = {
+  env: {
+    account: ACCOUNT,
+    region: REGION,
   }
-}
-
-// for development, use account/region from cdk cli
-const devEnv = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
 };
 
 const app = new App();
 
-new MyStack(app, 'advanced-architecting-aws-dev', { env: devEnv });
-// new MyStack(app, 'advanced-architecting-aws-prod', { env: prodEnv });
+new Lab1SecureS3EndpointStack(app, "Lab1", stackProps);
+new Lab2TransitGatewayStack(app, "Lab2", stackProps);
+new Lab3ECSFargateAppStack(app, "Lab3", stackProps);
+new Lab4LakeFormationStack(app, "Lab4", stackProps);
+new Lab5NFSDataSyncStack(app, "Lab5", stackProps);
 
 app.synth();
