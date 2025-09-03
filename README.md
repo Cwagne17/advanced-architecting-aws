@@ -4,7 +4,7 @@ This repository contains AWS CDK code for the labs in the "Advanced Architecting
 
 ## Lab 1: Securing Amazon S3 VPC Endpoint Communications
 
-![Lab 1 Architecture Diagram](./assets/lab1-architecture.png)
+![Lab 1 Architecture Diagram](./public/lab1-architecture.png)
 
 ### Lab overview
 
