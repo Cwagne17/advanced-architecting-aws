@@ -1,0 +1,12 @@
+Hello World! This is a demo file for Lab 1 - Secure S3 VPC Endpoint Communications.
+
+This file demonstrates successful communication from a private subnet EC2 instance to S3 through a VPC Gateway Endpoint.
+
+The architecture includes:
+- VPC with public and private subnets in one AZ
+- Public command host (accessible via Session Manager)
+- Private command host (no internet access, accessible via Session Manager through VPC endpoints)
+- S3 Gateway Endpoint for secure S3 access
+- Endpoint policy restricting access to LabBucket only
+
+Test complete!

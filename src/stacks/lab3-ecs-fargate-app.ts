@@ -4,6 +4,7 @@ import { Repository } from "aws-cdk-lib/aws-ecr";
 import { Cluster, ContainerImage } from "aws-cdk-lib/aws-ecs";
 import { ApplicationLoadBalancedFargateService } from "aws-cdk-lib/aws-ecs-patterns";
 import { Construct } from "constructs";
+import { createSSMSessionUrl } from "../shared/create-session-url";
 
 export class Lab3ECSFargateAppStack extends Stack {
     vpc: Vpc;
@@ -69,7 +70,7 @@ export class Lab3ECSFargateAppStack extends Stack {
 
         // Output the following information for the lab
         new CfnOutput(this, "CommandHostSessionURL", {
-            value: `https://${this.region}.console.aws.amazon.com/systems-manager/session-manager/${this.commandHost.instanceId}?region=${this.region}`,
+            value: createSSMSessionUrl(this.commandHost.instanceId, this.region),
             description: "SSM Session URL for Command Host",
         });
 
