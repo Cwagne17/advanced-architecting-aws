@@ -47,6 +47,23 @@ After completing this lab, you will be able to:
 
 ## Lab 3: Deploying an Application with Amazon ECS on Fargate
 
+### Lab overview
+
+You are developing an online game. You are optimistic that it will be a success and expect hundreds of thousands of gamers to access this game over the internet. You want to worry less about infrastructure and focus more on game development. You do not want to allocate any upfront infrastructure capital to deploy this game. However, you want to ensure that the application is scalable for user spikes after it is deployed.
+
+The online game is called Web 2048 and is ready to launch. Your cloud architect recommends using Amazon Elastic Container Service (Amazon ECS) on AWS Fargate.
+
+In this lab, you build your web-based game as a Docker container image, push it to Amazon Elastic Container Registry (Amazon ECR), and create an Amazon ECS cluster running your Docker containers on AWS Fargate.
+
+### bjectives
+
+After completing this lab, you will be able to:
+
+- Upload container images to an Amazon ECR repository to be used for an Amazon ECS deployment.
+- Deploy containers from a repository to an Amazon ECS Fargate cluster.
+- Create an Amazon ECS Service and Task.
+- Test and demo a web-based application in a Docker container on an Amazon ECS Fargate cluster.
+
 ## Lab 4: Setting Up a Data Lake with Lake Formation
 
 ## Lab 5: Migrating an On-Premises NFS Share Using AWS DataSync and Storage Gateway
