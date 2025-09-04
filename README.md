@@ -55,7 +55,7 @@ The online game is called Web 2048 and is ready to launch. Your cloud architect 
 
 In this lab, you build your web-based game as a Docker container image, push it to Amazon Elastic Container Registry (Amazon ECR), and create an Amazon ECS cluster running your Docker containers on AWS Fargate.
 
-### bjectives
+### Objectives
 
 After completing this lab, you will be able to:
 
@@ -65,5 +65,20 @@ After completing this lab, you will be able to:
 - Test and demo a web-based application in a Docker container on an Amazon ECS Fargate cluster.
 
 ## Lab 4: Setting Up a Data Lake with Lake Formation
+
+### Lab overview
+
+Your business is growing, and keeping track of your structured and unstructured data is becoming more difficult. You have decided to use AWS Lake Formation to build a data lake because you can use it to control and audit access to the data stored there.
+
+In this lab, you use Lake Formation to set up a data lake for a large music dataset. After creating the data lake, you set up an AWS Glue crawler to determine the schema and create a table in the AWS Glue Data Catalog. Once you have crawled the data, you grant access to the table and use Amazon Athena to query the data.
+
+### Objectives
+
+After completing this lab, you will be able to:
+
+Create a data lake and a database
+Crawl the data with AWS Glue to create the metadata and table
+Query the data using Athena
+Manage user permissions in Lake Formation
 
 ## Lab 5: Migrating an On-Premises NFS Share Using AWS DataSync and Storage Gateway
